@@ -12,3 +12,13 @@ string[] Array (int size) {
 
 string[] originArr = Array(arrSize);
 Console.WriteLine($"You've inputed next array: [{String.Join(", ", originArr)}]");
+
+int LengthOfTheNewArray (string[] gotedArr) {
+    int getTheSizeOfTheNewArr = 0;
+    for (int i=0; i < gotedArr.Length; i++) {
+        if (gotedArr[i].Length<4) {
+            getTheSizeOfTheNewArr++;
+        }
+    }
+    return getTheSizeOfTheNewArr;
+}
