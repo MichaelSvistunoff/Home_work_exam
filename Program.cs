@@ -22,3 +22,20 @@ int LengthOfTheNewArray (string[] gotedArr) {
     }
     return getTheSizeOfTheNewArr;
 }
+
+string[] newArray (string[] gotedArr, int size) {
+    string tempItem = string.Empty;
+    string[] tempArr = new string[size];
+    for (int i = 0; i < size;) {
+        for (int j = 0; j < gotedArr.Length; j++) {
+            if (gotedArr[j].Length<4) {
+                tempArr[i] = gotedArr[j];
+                i++;
+            }
+        }
+    }
+    return tempArr;
+}
+
+string[] finalArr = newArray(originArr, LengthOfTheNewArray(originArr));
+Console.WriteLine($"Your final array: [{String.Join(", ", finalArr)}]");
